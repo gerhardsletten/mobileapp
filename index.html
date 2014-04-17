@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testapp</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- jQuery Mobile styles-->     
+    <link rel="stylesheet" href="scripts/libs/jquery-mobile-bower/css/jquery.mobile-1.4.2.min.css"/> 
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fix for scrolling on iOS prior to iOS 6 -->
+    <style type="text/css">
+        .scrollable > * {
+            -webkit-transform: translateZ(0px);
+        }
+    </style>
+
+    <!-- Referencing Android specific PhoneGap JS 
+    <script src="lib/android/cordova-2.5.0.js"></script>-->
+    <script data-main="scripts/main" src="scripts/libs/requirejs/require.js"></script>
+</head>
+<body>
+<div id="container"/>
+</body>
+</html>
