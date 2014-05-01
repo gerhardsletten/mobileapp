@@ -1,10 +1,8 @@
 <div data-role="header" class="mb-header">
-	<a href="#" class="ui-btn-left js-test-button">Button</a>
     <h1>HomeView</h1>
-    <a href="#" class="ui-btn-right js-test-button">Button</a>
 </div>
 <div data-role="content" class="mb-content">
-    <p>This is the frontpage</p>
+    <p>This is the frontpage, enter <a href="#page">the subpage</a> to see transistion.</p>
 </div>
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">

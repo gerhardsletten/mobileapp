@@ -55,7 +55,7 @@ require(['domReady','jquery', 'underscore', 'backbone','jqm'], function(domReady
                     "page":"page"
                 },
                 home : function(){
-                    this.showLoading("Henter forside");
+                    this.showLoading("Loading page");
                     var self = this;
                     require(['views/home/HomeView'], function (HomeView) {
                         
@@ -65,11 +65,15 @@ require(['domReady','jquery', 'underscore', 'backbone','jqm'], function(domReady
                     });
                 },
                 page : function() {
-                    this.showLoading("Henter underside");
+                    this.showLoading("Loading page");
                     var self = this;
-                    require(['views/page/PageView'], function (PageView) {
-                        self.hideLoading();
-                        $.mobile.jqmNavigator.pushView(new PageView());
+                    require(['models/Page','views/page/PageView'], function (Page, PageView) {
+                        var page = new Page();
+                        page.fetch({success: function(){
+                            self.hideLoading();
+                            $.mobile.jqmNavigator.pushView(new PageView({model: page}));
+                        }});
+                        
                     });
                 }
             });
